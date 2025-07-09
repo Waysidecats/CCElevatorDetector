@@ -2,18 +2,14 @@ m = peripheral.find('monitor')
 p = peripheral.find('playerDetector')
 
 redstoneSide = 'back'
-x1 = 0
-x2 = 0
-y1 = 0
-y2 = 0
-z1 = 0
-z2 = 0
+pos1 = (0,0,0)
+pos2 = (0,0,0)
 
 m.setTextScale(5)
 m.clear()
 
 function isPlayer ()
-  x = p.getPlayersInCubic(x1,y1,z1,x2,y2,z2)
+  x = p.getPlayersInCoords(pos1,pos2)
   if x ~= nil then
     return true
   else
@@ -43,7 +39,6 @@ while true do
       print(num)
     end
     m.clear()
-    m.write('^')
     redstone.setOutput(redstoneSide, true)
     os.sleep(3)
     redstone.setOutput(redstoneSide, false)
