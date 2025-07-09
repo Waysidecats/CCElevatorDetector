@@ -4,6 +4,7 @@ p = peripheral.find('playerDetector')
 redstoneSide = 'back'
 pos1 = {x=0, y=0, z=0}
 pos2 = {x=0, y=0, z=0}
+delay = 5
 
 m.setTextScale(5)
 m.clear()
@@ -28,7 +29,7 @@ end
 while true do
   if isPlayer() then
     continue = true
-    num = 5
+    num = delay
     while num>0 and continue do
       continue = monitor(num)
       num = num - 1
