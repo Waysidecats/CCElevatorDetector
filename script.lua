@@ -1,6 +1,7 @@
 m = peripheral.find('monitor')
 p = peripheral.find('playerDetector')
 
+redstoneSide = 'back'
 x1 = 0
 x2 = 0
 y1 = 0
@@ -41,6 +42,9 @@ while true do
       num = num - 1
       print(num)
     end
+    redstone.setOutput(redstoneSide, true)
+    os.sleep(3)
+    redstone.setOutput(redstoneSide, false)
   end
 end
     
