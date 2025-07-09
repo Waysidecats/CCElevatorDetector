@@ -36,10 +36,12 @@ while true do
       print(num)
     end
     m.clear()
-    redstone.setOutput(redstoneSide, true)
-    os.sleep(3)
-    redstone.setOutput(redstoneSide, false)
-    m.clear()
+    if continue then
+      redstone.setOutput(redstoneSide, true)
+      os.sleep(3)
+      redstone.setOutput(redstoneSide, false)
+      m.clear()
+    end
   end
 end
     
