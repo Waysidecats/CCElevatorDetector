@@ -18,8 +18,8 @@ local function display()
   term.clear()
   term.setCursorPos(1, 1)
 
-  local screenW, screenH = term.getSize()
-  local maxPerPage = screenH // 6
+  local _, screenH = term.getSize()
+  local maxPerPage = math.floor(screenH / 6)
 
   for i = 1, maxPerPage do
     local index = i + scroll
@@ -65,7 +65,7 @@ parallel.waitForAny(
     while true do
       local event, p1 = os.pullEvent()
       local _, screenH = term.getSize()
-      local maxScroll = math.max(0, #players - (screenH // 6))
+      local maxScroll = math.max(0, #players - math.floor(screenH / 6))
 
       if event == "key" then
         local key = p1
