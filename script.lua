@@ -2,8 +2,8 @@ m = peripheral.find('monitor')
 p = peripheral.find('playerDetector')
 
 redstoneSide = 'back'
-pos1 = (0,0,0)
-pos2 = (0,0,0)
+pos1 = {x=0, y=0, z=0}
+pos2 = {x=0, y=0, z=0}
 
 m.setTextScale(5)
 m.clear()
