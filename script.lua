@@ -42,9 +42,12 @@ while true do
       num = num - 1
       print(num)
     end
+    m.clear()
+    m.write('↑')
     redstone.setOutput(redstoneSide, true)
     os.sleep(3)
     redstone.setOutput(redstoneSide, false)
+    m.clear()
   end
 end
     
