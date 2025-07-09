@@ -11,7 +11,7 @@ m.clear()
 
 function isPlayer ()
   x = p.getPlayersInCoords(pos1,pos2)
-  return players ~= nil and #players > 0
+  return x ~= nil and #x > 0
 end
 
 function monitor (num)
