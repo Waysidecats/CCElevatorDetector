@@ -30,11 +30,8 @@ local function display()
       if pos and pos.x ~= nil then
         print(username .. ": online")
         print("  Dim: " .. (pos.dimension or "N/A"))
-        print("  Pos: X=" .. safeFloor(pos.x) ..
-              " Y=" .. safeFloor(pos.y) ..
-              " Z=" .. safeFloor(pos.z))
-        print("  HP: " .. safeFloor(pos.health) ..
-              "/" .. safeFloor(pos.maxHealth))
+        print("  Pos: " .. safeFloor(pos.x) .. ", " .. safeFloor(pos.y) .. ", " .. safeFloor(pos.z))
+        print("  HP: " .. safeFloor(pos.health) .. "/" .. safeFloor(pos.maxHealth))
         print("  Air: " .. (pos.airSupply or "N/A"))
       else
         print(username .. ": online (no data)")
