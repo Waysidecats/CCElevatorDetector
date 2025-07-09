@@ -10,11 +10,7 @@ m.clear()
 
 function isPlayer ()
   x = p.getPlayersInCoords(pos1,pos2)
-  if x ~= nil then
-    return true
-  else
-    return false
-  end
+  return players ~= nil and #players > 0
 end
 
 function monitor (num)
